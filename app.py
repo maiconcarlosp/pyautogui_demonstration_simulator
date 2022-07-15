@@ -193,11 +193,15 @@ def estoque(pos):
     pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
     time.sleep(0.1)
 
-def processo(pega, solta):
+def processo(pega, solta, gravacao=True):
 
     grava = 7 - pega
-    solta = 1 + solta
-    home = 8 - solta
+    if gravacao == True:
+        solta = 1 + solta
+        home = 8 - solta
+    else:
+        solta = (8 - pega) + solta
+        home = 15 - (pega + solta)
 
     #0[pega]
     pyautogui.moveTo(3801, 1866, duration = 0.2)
@@ -234,118 +238,119 @@ def processo(pega, solta):
     pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
     time.sleep(1)
 
-    #0[7]
-    pyautogui.moveTo(3801, 1866, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, grava, 0.1, 'left')
-    time.sleep(0.1)
+    if gravacao == True:
+        #0[7]
+        pyautogui.moveTo(3801, 1866, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, grava, 0.1, 'left')
+        time.sleep(0.1)
 
-    #18
-    pyautogui.moveTo(4257, 1835, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 2, 0.2, 'left')
-    time.sleep(2)
+        #18
+        pyautogui.moveTo(4257, 1835, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 2, 0.2, 'left')
+        time.sleep(2)
 
-    #13
-    pyautogui.moveTo(3798, 1832, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
-    time.sleep(3)
+        #13
+        pyautogui.moveTo(3798, 1832, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
+        time.sleep(3)
 
-    #15
-    pyautogui.moveTo(3986, 1833, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
-    time.sleep(0.1)
+        #15
+        pyautogui.moveTo(3986, 1833, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
+        time.sleep(0.1)
 
-    #14
-    pyautogui.moveTo(3891, 1832, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
-    time.sleep(0.1)
+        #14
+        pyautogui.moveTo(3891, 1832, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
+        time.sleep(0.1)
 
-    #13
-    pyautogui.moveTo(3798, 1832, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
-    time.sleep(2)
+        #13
+        pyautogui.moveTo(3798, 1832, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
+        time.sleep(2)
 
 
-    #0[8]
-    pyautogui.moveTo(3801, 1866, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.1, 'left')
-    time.sleep(0.1)
+        #0[8]
+        pyautogui.moveTo(3801, 1866, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.1, 'left')
+        time.sleep(0.1)
 
-    #18
-    pyautogui.moveTo(4257, 1835, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 2, 0.2, 'left')
-    time.sleep(1)
+        #18
+        pyautogui.moveTo(4257, 1835, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 2, 0.2, 'left')
+        time.sleep(1)
 
-    #13
-    pyautogui.moveTo(3798, 1832, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
-    time.sleep(3)
+        #13
+        pyautogui.moveTo(3798, 1832, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
+        time.sleep(3)
 
-    #13
-    pyautogui.moveTo(3798, 1832, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
-    time.sleep(2)
+        #13
+        pyautogui.moveTo(3798, 1832, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
+        time.sleep(2)
 
-    #0[7]
-    pyautogui.moveTo(3801, 1866, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 14, 0.1, 'left')
-    time.sleep(0.1)
+        #0[7]
+        pyautogui.moveTo(3801, 1866, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 14, 0.1, 'left')
+        time.sleep(0.1)
 
-    #18
-    pyautogui.moveTo(4257, 1835, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 2, 0.2, 'left')
-    time.sleep(1)
+        #18
+        pyautogui.moveTo(4257, 1835, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 2, 0.2, 'left')
+        time.sleep(1)
 
-    #14
-    pyautogui.moveTo(3891, 1832, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
-    time.sleep(0.1)
+        #14
+        pyautogui.moveTo(3891, 1832, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
+        time.sleep(0.1)
 
-    #13
-    pyautogui.moveTo(3798, 1832, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
-    time.sleep(3)
+        #13
+        pyautogui.moveTo(3798, 1832, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
+        time.sleep(3)
 
-    #15
-    pyautogui.moveTo(3986, 1833, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
-    time.sleep(0.1)
+        #15
+        pyautogui.moveTo(3986, 1833, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
+        time.sleep(0.1)
 
-    #13
-    pyautogui.moveTo(3798, 1832, duration = 0.2)
-    time.sleep(0.1)
-    currentMouseX, currentMouseY = pyautogui.position()
-    pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
-    time.sleep(2)
+        #13
+        pyautogui.moveTo(3798, 1832, duration = 0.2)
+        time.sleep(0.1)
+        currentMouseX, currentMouseY = pyautogui.position()
+        pyautogui.click(currentMouseX, currentMouseY, 1, 0.2, 'left')
+        time.sleep(2)
 
     #0[solta]
     pyautogui.moveTo(3801, 1866, duration = 0.2)
@@ -825,7 +830,7 @@ time.sleep(2)
 
 focoProcesso('in')
 processo(4,3)
-processo(2,2)
+processo(2,2,gravacao=False)
 processo(5,1)
 focoProcesso('out')
 
